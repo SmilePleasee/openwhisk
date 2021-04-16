@@ -87,6 +87,11 @@ jobs:
       - ./tools/travis/checkAndUploadLogs.sh system
       name: "System Tests"
     - script:
+      - ./tools/travis/runSystemTests.sh
+      - ./tools/travis/checkAndUploadLogs.sh system
+      name: "System Tests"
+      arch: arm64-graviton2
+    - script:
       - ./tools/travis/runMultiRuntimeTests.sh
       - ./tools/travis/checkAndUploadLogs.sh multi-runtime
       name: "Multi-Runtime Tests"
